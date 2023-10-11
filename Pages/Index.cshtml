@@ -1,0 +1,51 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h3>Your Hand</h3>
+    <h4>Total: @Model.PlayerTotal</h4>
+    @foreach (var card in Model.PlayerHand)
+    {
+        <div>@card.Rank of @card.Suit</div>
+    }
+    @if (Model.IsPlayersTurn && Model.IsInProgress)
+    {
+        <form method="post">
+            <button type="submit" asp-page-handler="DrawCard">Hit</button>
+            <button type="submit" asp-page-handler="Stay">Stay</button>
+        </form>
+    }
+    <hr />
+    <h3>Dealer's Hand</h3>
+    @if (Model.IsPlayersTurn && Model.IsInProgress)
+    {
+        <h4>Total: ...</h4>
+        <div>@Model.DealerHand[0].Rank of @Model.DealerHand[0].Suit</div>
+        <div>Hidden...</div>
+    }
+    else
+    {
+        <h4>Total: @Model.DealerTotal</h4>
+        @foreach (var card in Model.DealerHand)
+        {
+            <div>@card.Rank of @card.Suit</div>
+        }        
+    }
+    <hr />
+    <div>@Model.GameState</div>
+    @if (Model.IsInProgress == false)
+    {
+        <form method="post">
+            <button type="submit" asp-page-handler="DealHand">Deal Me In</button>
+        </form>
+    }
+    else if (Model.IsPlayersTurn == false)
+    {
+        <form method="post">
+            <button type="submit" asp-page-handler="DrawCard">Continue</button>
+        </form>
+    }
+</div>
