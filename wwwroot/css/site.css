@@ -16,3 +16,13 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.card-bg-red {
+    filter: invert(10%) sepia(93%) saturate(5393%) hue-rotate(359deg) brightness(93%) contrast(114%);
+}
+
+.card-bg-black {
+}
+.card-rank {
+    margin: -15px 0 0 -50px;
+}

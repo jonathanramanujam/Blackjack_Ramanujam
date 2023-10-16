@@ -9,37 +9,37 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Blackjack
 build_property.RootNamespace = Blackjack
-build_property.ProjectDir = H:\Blackjack_Ramanujam\Blackjack_Ramanujam\
+build_property.ProjectDir = C:\Blackjack_Ramanujam\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = H:\Blackjack_Ramanujam\Blackjack_Ramanujam
+build_property.MSBuildProjectDirectory = C:\Blackjack_Ramanujam
 build_property._RazorSourceGeneratorDebug = 
 
-[H:/Blackjack_Ramanujam/Blackjack_Ramanujam/Pages/Error.cshtml]
+[C:/Blackjack_Ramanujam/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[H:/Blackjack_Ramanujam/Blackjack_Ramanujam/Pages/Index.cshtml]
+[C:/Blackjack_Ramanujam/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[H:/Blackjack_Ramanujam/Blackjack_Ramanujam/Pages/Privacy.cshtml]
+[C:/Blackjack_Ramanujam/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[H:/Blackjack_Ramanujam/Blackjack_Ramanujam/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Blackjack_Ramanujam/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[H:/Blackjack_Ramanujam/Blackjack_Ramanujam/Pages/_ViewImports.cshtml]
+[C:/Blackjack_Ramanujam/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[H:/Blackjack_Ramanujam/Blackjack_Ramanujam/Pages/_ViewStart.cshtml]
+[C:/Blackjack_Ramanujam/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[H:/Blackjack_Ramanujam/Blackjack_Ramanujam/Pages/Shared/_Layout.cshtml]
+[C:/Blackjack_Ramanujam/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-277mz0sp04

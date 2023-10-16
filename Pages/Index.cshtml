@@ -1,51 +1,101 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Blackjack";
 }
 
-<div class="text-center">
-    <h3>Your Hand</h3>
-    <h4>Total: @Model.PlayerTotal</h4>
-    @foreach (var card in Model.PlayerHand)
-    {
-        <div>@card.Rank of @card.Suit</div>
-    }
-    @if (Model.IsPlayersTurn && Model.IsInProgress)
-    {
-        <form method="post">
-            <button type="submit" asp-page-handler="DrawCard">Hit</button>
-            <button type="submit" asp-page-handler="Stay">Stay</button>
-        </form>
-    }
-    <hr />
-    <h3>Dealer's Hand</h3>
-    @if (Model.IsPlayersTurn && Model.IsInProgress)
-    {
-        <h4>Total: ...</h4>
-        <div>@Model.DealerHand[0].Rank of @Model.DealerHand[0].Suit</div>
-        <div>Hidden...</div>
-    }
-    else
-    {
-        <h4>Total: @Model.DealerTotal</h4>
-        @foreach (var card in Model.DealerHand)
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Blackjack</title>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"/>
+    </head>
+    <body class="text-center">
+        <h3>Your Hand</h3>
+        <h4>Total: @Model.PlayerTotal</h4>
+        <div class="row-cols-lg-auto row d-flex justify-content-center">
+            @foreach (var card in Model.PlayerHand)
+            {
+                <card class="card shadow" style="width:6rem; height:9rem; margin:5px 5px 5px -30px;">
+                @if (card.Suit == "Hearts" || card.Suit == "Diamonds")
+                {
+                    <img class="card-img-top mx-auto my-auto d-block card-bg-red" src="@card.Icon">
+                }
+                else
+                {
+                    <img class="card-img-top mx-auto my-auto d-block card-bg-black" src="@card.Icon">
+                }
+                    <overlay class="card-img-overlay">
+                        <h1 class="card-rank">@card.Rank</h1>
+                    </overlay>
+                </card>
+            }
+        </div>
+        @if (Model.IsPlayersTurn && Model.IsInProgress)
         {
-            <div>@card.Rank of @card.Suit</div>
-        }        
+            <form method="post">
+                <button type="submit" asp-page-handler="DrawCard">Hit</button>
+                <button type="submit" asp-page-handler="Stay">Stay</button>
+        </form>
     }
     <hr />
-    <div>@Model.GameState</div>
-    @if (Model.IsInProgress == false)
-    {
-        <form method="post">
-            <button type="submit" asp-page-handler="DealHand">Deal Me In</button>
-        </form>
+        <h3>Dealer's Hand</h3>
+        @if (Model.IsPlayersTurn && Model.IsInProgress)
+        {
+            <h4>Total: ...</h4>
+            <div class="row-cols-lg-auto row d-flex justify-content-center">
+                <card class="card shadow" style="width:6rem; height:9rem; margin:5px 5px 5px -30px;">
+                    <img class="card-img-top mx-auto my-auto d-block card-bg-black" src="images/question-lg.svg">
+                </card>
+                <card class="card shadow" style="width:6rem; height:9rem; margin:5px 5px 5px -30px;">
+                    @if (Model.DealerHand[1].Suit == "Hearts" || Model.DealerHand[1].Suit == "Diamonds")
+                    {
+                        <img class="card-img-top mx-auto my-auto d-block card-bg-red" src="@Model.DealerHand[1].Icon">
+                    }
+                    else
+                    {
+                        <img class="card-img-top mx-auto my-auto d-block card-bg-black" src="@Model.DealerHand[1].Icon">
+                    }
+                    <overlay class="card-img-overlay">
+                    <h1 class="card-rank">@Model.DealerHand[1].Rank</h1>
+                    </overlay>
+                </card>
+            </div>
+        }
+        else
+        {
+            <h4>Total: @Model.DealerTotal</h4>
+            <div class="row-cols-lg-auto row d-flex justify-content-center">
+                @foreach (var card in Model.DealerHand)
+                {
+                    <card class="card shadow" style="width:6rem; height:9rem; margin:5px 5px 5px -30px;">
+                        @if (card.Suit == "Hearts" || card.Suit == "Diamonds")
+                        {
+                            <img class="card-img-top mx-auto my-auto d-block card-bg-red" src="@card.Icon">
+                        }
+                        else
+                        {
+                            <img class="card-img-top mx-auto my-auto d-block card-bg-black" src="@card.Icon">
+                        }
+                        <overlay class="card-img-overlay">
+                            <h1 class="card-rank">@card.Rank</h1>
+                        </overlay>
+                    </card>
+                }
+            </div>
     }
-    else if (Model.IsPlayersTurn == false)
-    {
+        <hr />
+        <div>@Model.GameState</div>
         <form method="post">
-            <button type="submit" asp-page-handler="DrawCard">Continue</button>
+            @if (Model.IsInProgress == false)
+            {
+                    <button type="submit" asp-page-handler="DealHand">Deal Me In</button>
+            }
+            else if (Model.IsPlayersTurn == false)
+            {
+                    <button type="submit" asp-page-handler="DrawCard">Continue</button>
+            }
         </form>
-    }
-</div>
+    </body>
+</html>
+

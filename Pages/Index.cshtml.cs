@@ -148,10 +148,10 @@ namespace WebApplication1.Pages
                 string rank = i.ToString();
                 switch (i)
                 {
-                    case 11: rank = "Jack"; break;
-                    case 12: rank = "Queen"; break;
-                    case 13: rank = "King"; break;
-                    case 14: rank = "Ace"; break;
+                    case 11: rank = "J"; break;
+                    case 12: rank = "Q"; break;
+                    case 13: rank = "K"; break;
+                    case 14: rank = "A"; break;
                 }
                 deck.Add(new Card("Hearts", rank));
                 deck.Add(new Card("Diamonds", rank));
@@ -189,7 +189,7 @@ namespace WebApplication1.Pages
             foreach (Card card in DealerHand)
             {
                 DealerTotal += card.Value;
-                if (card.Rank == "Ace")
+                if (card.Rank == "A")
                 {
                     aces++;
                 }
@@ -203,7 +203,7 @@ namespace WebApplication1.Pages
             foreach (Card card in PlayerHand)
             {
                 PlayerTotal += card.Value;
-                if (card.Rank == "Ace")
+                if (card.Rank == "A")
                 {
                     aces++;
                 }

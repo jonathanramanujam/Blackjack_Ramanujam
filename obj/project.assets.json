@@ -606,24 +606,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jonra\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\jonra\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\Blackjack_Ramanujam\\Blackjack_Ramanujam\\Blackjack.csproj",
+      "projectUniqueName": "C:\\Blackjack_Ramanujam\\Blackjack.csproj",
       "projectName": "Blackjack",
-      "projectPath": "H:\\Blackjack_Ramanujam\\Blackjack_Ramanujam\\Blackjack.csproj",
+      "projectPath": "C:\\Blackjack_Ramanujam\\Blackjack.csproj",
       "packagesPath": "C:\\Users\\jonra\\.nuget\\packages\\",
-      "outputPath": "H:\\Blackjack_Ramanujam\\Blackjack_Ramanujam\\obj\\",
+      "outputPath": "C:\\Blackjack_Ramanujam\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\jonra\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -631,7 +626,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.308\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -678,7 +673,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.308\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }
