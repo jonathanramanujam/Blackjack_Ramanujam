@@ -17,12 +17,16 @@ body {
   margin-bottom: 60px;
 }
 
-.card-bg-red {
+.playing-card {
+    width: 6rem;
+    height: 9rem;
+    margin: 5px 5px 5px -30px;
+}
+
+.card-icon-red {
     filter: invert(10%) sepia(93%) saturate(5393%) hue-rotate(359deg) brightness(93%) contrast(114%);
 }
 
-.card-bg-black {
-}
 .card-rank {
     margin: -15px 0 0 -50px;
 }

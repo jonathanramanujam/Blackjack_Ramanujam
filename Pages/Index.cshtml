@@ -16,14 +16,14 @@
         <div class="row-cols-lg-auto row d-flex justify-content-center">
             @foreach (var card in Model.PlayerHand)
             {
-                <card class="card shadow" style="width:6rem; height:9rem; margin:5px 5px 5px -30px;">
+                <card class="card playing-card shadow">
                 @if (card.Suit == "Hearts" || card.Suit == "Diamonds")
                 {
-                    <img class="card-img-top mx-auto my-auto d-block card-bg-red" src="@card.Icon">
+                    <img class="card-img-top mx-auto my-auto d-block card-icon-red" src="@card.Icon">
                 }
                 else
                 {
-                    <img class="card-img-top mx-auto my-auto d-block card-bg-black" src="@card.Icon">
+                    <img class="card-img-top mx-auto my-auto d-block" src="@card.Icon">
                 }
                     <overlay class="card-img-overlay">
                         <h1 class="card-rank">@card.Rank</h1>
@@ -37,24 +37,24 @@
                 <button type="submit" asp-page-handler="DrawCard">Hit</button>
                 <button type="submit" asp-page-handler="Stay">Stay</button>
         </form>
-    }
-    <hr />
+        }
+        <hr />
         <h3>Dealer's Hand</h3>
         @if (Model.IsPlayersTurn && Model.IsInProgress)
         {
             <h4>Total: ...</h4>
             <div class="row-cols-lg-auto row d-flex justify-content-center">
-                <card class="card shadow" style="width:6rem; height:9rem; margin:5px 5px 5px -30px;">
-                    <img class="card-img-top mx-auto my-auto d-block card-bg-black" src="images/question-lg.svg">
+                <card class="card playing-card shadow">
+                    <img class="card-img-top mx-auto my-auto d-block" src="images/question-lg.svg">
                 </card>
-                <card class="card shadow" style="width:6rem; height:9rem; margin:5px 5px 5px -30px;">
+                <card class="card playing-card shadow">
                     @if (Model.DealerHand[1].Suit == "Hearts" || Model.DealerHand[1].Suit == "Diamonds")
                     {
-                        <img class="card-img-top mx-auto my-auto d-block card-bg-red" src="@Model.DealerHand[1].Icon">
+                        <img class="card-img-top mx-auto my-auto d-block card-icon-red" src="@Model.DealerHand[1].Icon">
                     }
                     else
                     {
-                        <img class="card-img-top mx-auto my-auto d-block card-bg-black" src="@Model.DealerHand[1].Icon">
+                        <img class="card-img-top mx-auto my-auto d-block" src="@Model.DealerHand[1].Icon">
                     }
                     <overlay class="card-img-overlay">
                     <h1 class="card-rank">@Model.DealerHand[1].Rank</h1>
@@ -68,14 +68,14 @@
             <div class="row-cols-lg-auto row d-flex justify-content-center">
                 @foreach (var card in Model.DealerHand)
                 {
-                    <card class="card shadow" style="width:6rem; height:9rem; margin:5px 5px 5px -30px;">
+                    <card class="card playing-card shadow">
                         @if (card.Suit == "Hearts" || card.Suit == "Diamonds")
                         {
-                            <img class="card-img-top mx-auto my-auto d-block card-bg-red" src="@card.Icon">
+                            <img class="card-img-top mx-auto my-auto d-block card-icon-red" src="@card.Icon">
                         }
                         else
                         {
-                            <img class="card-img-top mx-auto my-auto d-block card-bg-black" src="@card.Icon">
+                            <img class="card-img-top mx-auto my-auto d-block" src="@card.Icon">
                         }
                         <overlay class="card-img-overlay">
                             <h1 class="card-rank">@card.Rank</h1>
@@ -83,7 +83,7 @@
                     </card>
                 }
             </div>
-    }
+        }
         <hr />
         <div>@Model.GameState</div>
         <form method="post">
